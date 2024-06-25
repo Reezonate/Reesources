@@ -209,7 +209,65 @@
 
     <!--  'About Me'  -->
     <style>
+        .star-wars-mask {
+            height: 325px !important;
+            overflow: hidden;
+            mask-type: alpha;
+            -webkit-mask-image: linear-gradient(180deg, transparent, white 10%, white 90%, transparent);
+            mask-image: linear-gradient(180deg, transparent, white 10%, white 90%, transparent);
+        }
+        .star-wars-mask-2 {
+            mask-type: alpha;
+            -webkit-mask-image: linear-gradient(180deg, transparent, white 20%, white 80%, transparent);
+            mask-image: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+        }
+        .star-wars {
+            transform: perspective(300px);
+            transform-style: preserve-3d;
+        }
+        .star-wars-text-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            perspective-origin: 50% 50%;
+            transform: rotateX(28deg) translateZ(50px);
+        }
+        .star-wars-text {
+            width: 60%;
+            color: #f7ffc0;
+            text-shadow: 0 0 10px #ff9100;
+            text-align: center;
+            animation: linear 70s scroll;
+            animation-fill-mode: forwards;
+        }
+        .star-wars-text-bg{
+            position: absolute;
+            width: 4000px;
+            height: 4000px;
+            left: -2000px;
+            top: -2000px;
+            z-index: -2;
+            background: black;
+        }
+        .star-wars-text > p {
+            font-size: 24px;
+        }
+        .star-wars-text > h2 {
+            font-size: 32px;
+        }
 
+        @keyframes scroll {
+            0% {
+                opacity: 0;
+                transform: translateY(57%);
+            }
+            2% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-70%);
+            }
+        }
     </style>
 
     <!--  'Showcase'  -->
@@ -371,9 +429,40 @@
                 <label for="tab3" class="label third-label">My Mods</label>
 
                 <div class="tab-panels">
-                    <section id="t1" class="tab-panel">
-                        <h2 class="dummy-content">Hi, I'm Reezonate!</h2>
-                        <h2 class="dummy-content">I'm too lazy to fill the bio right now :3</h2>
+                    <section id="t1" class="tab-panel star-wars-mask">
+                        <div class="star-wars-mask-2">
+                            <div class="star-wars">
+                                <div class="star-wars-text-container">
+                                    <div class="star-wars-text">
+                                        <div class="star-wars-text-bg"></div>
+                                        <p>
+                                            A long time ago in a galaxy far, far away....
+                                        </p>
+
+                                        <h2>
+                                            Episode XXVII
+                                            THE RISE OF REEZONATE
+                                        </h2>
+
+                                        <p>
+                                            It is a period of intense competition. In the vast expanse of the Beat Saber universe, a new hero has emerged. Reezonate, a master of the saber, has risen through the ranks, his skills in competitive accuracy maps becoming the stuff of legend.
+                                        </p>
+                                        <p>
+                                            With unparalleled precision and lightning-fast reflexes, Reezonate has faced countless challengers, his prowess unmatched in the galaxy. But it is not just his skill in the game that sets him apart. A true innovator, Reezonate has brought new life to the Beat Saber community by creating a plethora of groundbreaking mods, enhancing the experience for players across the stars.
+                                        </p>
+                                        <p>
+                                            As the Galactic Beat Saber Championship approaches, players from every corner of the galaxy prepare to test their mettle. But all eyes are on Reezonate, the player who has transcended the game, transforming it with his creativity and dedication.
+                                        </p>
+                                        <p>
+                                            In this time of competition and camaraderie, will Reezonate continue to dominate the leaderboards and inspire players with his visionary mods? Only time will tell as the beat of the saber echoes through the cosmos...
+                                        </p>
+                                        <h2>
+                                            May the rhythm be with you
+                                        </h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </section>
                     <section id="t2" class="tab-panel">
                         <div class="video-flex">
