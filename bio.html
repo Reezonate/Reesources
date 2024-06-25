@@ -210,6 +210,7 @@
     <!--  'About Me'  -->
     <style>
         .star-wars-mask {
+            margin-top: 5px;
             height: 325px !important;
             overflow: hidden;
             mask-type: alpha;
@@ -218,8 +219,8 @@
         }
         .star-wars-mask-2 {
             mask-type: alpha;
-            -webkit-mask-image: linear-gradient(180deg, transparent, white 20%, white 80%, transparent);
-            mask-image: linear-gradient(90deg, transparent, white 20%, white 80%, transparent);
+            -webkit-mask-image: linear-gradient(180deg, transparent, white 15%, white 85%, transparent);
+            mask-image: linear-gradient(90deg, transparent, white 15%, white 85%, transparent);
         }
         .star-wars {
             transform: perspective(300px);
@@ -237,13 +238,13 @@
             color: #f7ffc0;
             text-shadow: 0 0 10px #ff9100;
             text-align: center;
-            animation: linear 70s scroll;
+            animation: linear 80s scroll;
             animation-fill-mode: forwards;
         }
         .star-wars-text-bg{
             position: absolute;
             width: 4000px;
-            height: 4000px;
+            height: 5000px;
             left: -2000px;
             top: -2000px;
             z-index: -2;
@@ -255,17 +256,21 @@
         .star-wars-text > h2 {
             font-size: 32px;
         }
+        .lovege {
+            width: 128px;
+            height: 164px;
+        }
 
         @keyframes scroll {
             0% {
                 opacity: 0;
-                transform: translateY(57%);
+                transform: translateY(calc(50% + 120px));
             }
-            2% {
+            3% {
                 opacity: 1;
             }
             100% {
-                transform: translateY(-70%);
+                transform: translateY(calc(-50% - 200px));
             }
         }
     </style>
@@ -459,6 +464,8 @@
                                         <h2>
                                             May the rhythm be with you
                                         </h2>
+
+                                        <img src="https://raw.githubusercontent.com/Reezonate/Reesources/main/KuramaDerpHeartTiny.png" class="lovege" alt="<heart emote">
                                     </div>
                                 </div>
                             </div>
