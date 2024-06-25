@@ -232,14 +232,15 @@
             align-items: center;
             perspective-origin: 50% 50%;
             transform: rotateX(28deg) translateZ(50px);
+            animation: 5s ease-in-out 75s rotate, 80s linear scroll;
+            animation-fill-mode: forwards;
+            animation-composition: add;
         }
         .star-wars-text {
             width: 60%;
             color: #f7ffc0;
             text-shadow: 0 0 10px #ff9100;
             text-align: center;
-            animation: linear 80s scroll;
-            animation-fill-mode: forwards;
         }
         .star-wars-text-bg{
             position: absolute;
@@ -270,7 +271,16 @@
                 opacity: 1;
             }
             100% {
-                transform: translateY(calc(-50% - 200px));
+                transform: translateY(calc(-50% + 120px));
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotateX(0) translateZ(0);
+            }
+            100% {
+                transform: rotateX(-28deg) translateZ(-50px);
             }
         }
     </style>
@@ -462,6 +472,7 @@
                                             In this time of competition and camaraderie, will Reezonate continue to dominate the leaderboards and inspire players with his visionary mods? Only time will tell as the beat of the saber echoes through the cosmos...
                                         </p>
                                         <h2>
+                                            <br>
                                             May the rhythm be with you
                                         </h2>
 
