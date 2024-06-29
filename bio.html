@@ -422,16 +422,23 @@
             width: 120px;
             height: 100px;
         }
-        .my-bio-link {
+        .bio-resources {
             display: flex;
             justify-content: center;
+            align-items: center;
+            grid-gap: 10px;
+            margin-top: 10px;
+        }
+        .bio-resources-link {
+            height: 20px;
             font-size: 16px;
             font-weight: 700;
+            text-align: center;
             text-decoration: unset;
             transition: .2s;
             color: var(--text-fade-color);
         }
-        .my-bio-link:hover {
+        .bio-resources-link:hover {
             color: var(--text-focus-color);
         }
     </style>
@@ -685,7 +692,11 @@
                                 </div>
                                 <img class="mod-preview-image" src="https://raw.githubusercontent.com/Reezonate/Reesources/main/ReeSabersPreview.png" alt="ReeSabers mod preview">
                             </div>
-                            <a class="my-bio-link" href="https://github.com/Reezonate/Reesources/blob/main/bio.html" target="_blank">bio source code</a>
+                            <div class="bio-resources">
+                                <a class="bio-resources-link" href="https://github.com/Reezonate/Reesources/blob/main/bio.html" target="_blank">Bio source code</a>
+                                <div class="socials-separator"></div>
+                                <a class="bio-resources-link" href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank">CSS reference</a>
+                            </div>
                         </div>
                     </section>
                 </div>
